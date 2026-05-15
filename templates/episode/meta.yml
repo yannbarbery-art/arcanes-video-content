@@ -1,0 +1,15 @@
+# Métadonnées de l'épisode — voir schéma dans docs/conventions.md
+id: EP[NN]-[slug]
+serie: le-colosse
+titre_fr: "[...]"
+titre_nl: "[...]"
+format:
+  ratio: "9:16"
+  duree_s: [NN]
+statut: idee   # idee | brief | script | prompts | genere | post-prod | publie
+plateformes: [tiktok, reels, linkedin]
+sources_data:
+  - "[Statbel — ...]"
+date_brief: [AAAA-MM-JJ]
+date_publication_prevue: [AAAA-MM-JJ]
+langues: [fr, nl]

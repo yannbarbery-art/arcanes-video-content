@@ -1,0 +1,15 @@
+# Métadonnées du snippet — voir schéma dans docs/conventions.md
+id: "[AAAA-MM-JJ-slug]"
+serie: "—"
+titre_fr: "[...]"
+titre_nl: "[...]"
+format:
+  ratio: "9:16"
+  duree_s: [NN]
+statut: idee   # idee | brief | script | prompts | genere | post-prod | publie
+plateformes: [tiktok, reels]
+sources_data:
+  - "[...]"
+date_brief: [AAAA-MM-JJ]
+date_publication_prevue: [AAAA-MM-JJ]
+langues: [fr, nl]

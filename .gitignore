@@ -1,4 +1,4 @@
-﻿# Fichiers générés (vidéos, images, audio)
+# Fichiers générés (vidéos, images, audio)
 output/
 assets-raw/
 *.mp4
@@ -11,12 +11,28 @@ assets-raw/
 *.mp3
 !docs/**/*.png
 !docs/**/*.jpg
+!docs/**/*.jpeg
+!brand/**/*.png
+!brand/**/*.jpg
+!brand/**/*.jpeg
+
+# Images de référence versionnées (dossiers refs/ des séries)
+# series/**/refs/ couvre aussi series/**/characters/refs/
+!series/**/refs/
+!series/**/refs/**
 
 # Secrets et configs locales
 .env
 .env.local
 *.key
 credentials/
+
+# Tooling (scripts de génération de maps, etc.)
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
 
 # OS
 .DS_Store
@@ -28,5 +44,12 @@ desktop.ini
 .idea/
 *.swp
 
+# Divers
+*.log
+tmp/
+
 # Claude Code
+# .claude/cache/ et settings.local.json sont locaux/personnels.
+# settings.json et les skills/commands de projet restent versionnables.
 .claude/cache/
+.claude/settings.local.json

@@ -1,0 +1,32 @@
+﻿# Fichiers générés (vidéos, images, audio)
+output/
+assets-raw/
+*.mp4
+*.mov
+*.webm
+*.png
+*.jpg
+*.jpeg
+*.wav
+*.mp3
+!docs/**/*.png
+!docs/**/*.jpg
+
+# Secrets et configs locales
+.env
+.env.local
+*.key
+credentials/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+
+# Claude Code
+.claude/cache/

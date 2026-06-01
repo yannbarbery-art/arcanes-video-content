@@ -53,6 +53,28 @@ Fais le point sur les fichiers modifiés, vérifie qu'aucun secret ni média
 lourd n'est ajouté, puis commit avec un message clair. Ne push pas.
 ```
 
+## Conventions de fichiers générés
+
+Tout média produit par un outil de génération (image, vidéo, audio) est écrit
+dans le repo, à un emplacement déterminé par sa nature. Jamais ailleurs.
+
+| Nature | Destination |
+| --- | --- |
+| Test exploratoire | `output/tests/AAAA-MM-JJ-slug.{ext}` |
+| Génération d'épisode | `series/<serie>/episodes/EPNN-slug/output/` |
+| Génération de snippet | `snippets/AAAA-MM-JJ-slug/output/` |
+
+Règles strictes :
+
+- **Jamais** dans `/tmp/`, `$env:TEMP`, ni aucun chemin système. Un fichier
+  hors du repo est un fichier perdu.
+- En cas d'échec de `curl` (ex. erreur SSL en sandbox), basculer sur
+  `Invoke-WebRequest` PowerShell — mais **vers la même destination cible**,
+  jamais vers un répertoire temporaire système.
+- Le `slug` reprend le sujet de façon lisible (`bxl-art-nouveau`,
+  `peb-shot-03`), en minuscules, mots séparés par des tirets.
+- Vérifier que les médias lourds restent hors commit (voir `.gitignore`).
+
 ## Bonnes pratiques
 
 - Toujours donner à Claude les **chiffres ET leurs sources** : il ne doit
